@@ -127,3 +127,4 @@ TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1024
 TW_FRAMERATE := 60
+TW_HAS_EDL_MODE := true
