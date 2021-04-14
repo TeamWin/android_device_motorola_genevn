@@ -1,5 +1,3 @@
-pt-utils/gpt-utils.h
-@@ -0,0 +1,193 @@
 /*
  * Copyright (c) 2013,2016,2020 The Linux Foundation. All rights reserved.
  *
@@ -82,8 +80,10 @@ extern "C" {
 #define AB_SLOT_B_SUFFIX                "_b"
 #define PTN_XBL                         "xbl"
 #define PTN_XBL_CFG                     "xbl_config"
-#define PTN_SWAP_LIST                   PTN_XBL, PTN_XBL_CFG, "sbl1", "rpm", "tz", "aboot", "abl", "hyp", "lksecapp", "keymaster", "cmnlib", "cmnlib32", "cmnlib64", "pmic", "apdp", "devcfg", "hosd", "keystore", "msadp", "mdtp", "mdtpsecapp", "dsp", "aop", "qupfw", "vbmeta", "dtbo", "imagefv", "ImageFv", "multiimgoem", "multiimgqti", "uefisecapp", "vm-bootsys", "shrm", "cpucp"
-#define AB_PTN_LIST PTN_SWAP_LIST, "boot", "vendor_boot", "system", "vendor", "odm", "modem", "bluetooth"
+#define PTN_MULTIIMGOEM                 "multiimgoem"
+#define PTN_MULTIIMGQTI                 "multiimgqti"
+#define PTN_SWAP_LIST                   PTN_XBL, PTN_XBL_CFG, PTN_MULTIIMGOEM, PTN_MULTIIMGQTI, "sbl1", "rpm", "tz", "aboot", "abl", "hyp", "lksecapp", "keymaster", "cmnlib", "cmnlib32", "cmnlib64", "pmic", "apdp", "devcfg", "hosd", "keystore", "msadp", "mdtp", "mdtpsecapp", "dsp", "aop", "qupfw", "vbmeta", "dtbo", "imagefv", "ImageFv", "uefisecapp", "vm-bootsys", "shrm", "cpucp", "featenabler", "vbmeta_system"
+#define AB_PTN_LIST PTN_SWAP_LIST, "boot", "vendor_boot", "system", "system_ext", "product", "vendor", "odm", "modem", "bluetooth"
 #define BOOT_DEV_DIR    "/dev/block/bootdevice/by-name"
 
 /******************************************************************************
