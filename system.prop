@@ -1,0 +1,17 @@
+# ADB
+ro.adb.secure=0
+
+# Battery Property
+ro.charger.enable_suspend=1
+
+# Crypto
+ro.crypto.allow_encrypt_override=true
+ro.crypto.dm_default_key.options_format.version=2
+ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.volume.metadata.method=dm-default-key
+
+# Gatekeeper
+vendor.gatekeeper.disable_spu=true
+
+# MTP
+vendor.usb.use_ffs_mtp=1
