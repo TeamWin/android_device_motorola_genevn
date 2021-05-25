@@ -128,6 +128,7 @@ TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1024
 TW_FRAMERATE := 60
 TW_HAS_EDL_MODE := true
+TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone39/temp
 
 # Debug flags
 TWRP_INCLUDE_LOGCAT := true
