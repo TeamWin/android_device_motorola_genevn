@@ -131,6 +131,7 @@ TW_FRAMERATE := 60
 TW_HAS_EDL_MODE := true
 TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone39/temp
 TW_EXCLUDE_DEFAULT_USB_INIT := true
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
 
 # Debug flags
 TWRP_INCLUDE_LOGCAT := true
