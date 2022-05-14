@@ -14,7 +14,6 @@
 // limitations under the License.
 //
 
-
 cc_library {
     name: "libgptutils.moto_sm8450",
     vendor: true,
@@ -27,6 +26,8 @@ cc_library {
     cflags: [
         "-Wall",
         "-Werror",
+        "-Wno-unused-parameter",
+        "-D_GENERIC_KERNEL_HEADERS",
         "-D_BSG_FRAMEWORK_KERNEL_HEADERS",
     ],
     srcs: [
@@ -35,7 +36,7 @@ cc_library {
     ],
     owner: "qti",
     header_libs: [
-        "generated_kernel_headers",
+        "device_kernel_headers",
     ],
     export_include_dirs: ["."],
 }
