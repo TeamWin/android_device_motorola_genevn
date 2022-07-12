@@ -45,6 +45,11 @@ PRODUCT_PACKAGES += \
     update_verifier \
     update_engine_sideload
 
+# Crypto
+PRODUCT_PACKAGES += \
+    qcom_decrypt \
+    qcom_decrypt_fbe
+
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
