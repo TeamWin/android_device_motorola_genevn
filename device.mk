@@ -43,6 +43,12 @@ PRODUCT_PACKAGES += \
     update_verifier \
     update_engine_sideload
 
+# F2FS utilities
+PRODUCT_PACKAGES += \
+    sg_write_buffer \
+    f2fs_io \
+    check_f2fs
+
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.bootimage.build.date.utc=0 \
