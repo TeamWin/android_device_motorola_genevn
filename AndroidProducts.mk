@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_hiphi.mk
+    $(LOCAL_DIR)/twrp_hiphi.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_hiphi-user \
-    omni_hiphi-userdebug \
-    omni_hiphi-eng
+    twrp_hiphi-user \
+    twrp_hiphi-userdebug \
+    twrp_hiphi-eng

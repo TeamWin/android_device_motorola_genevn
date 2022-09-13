@@ -6,17 +6,17 @@
 #
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+# Inherit some common TWRP stuff.
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from hiphi device
 $(call inherit-product, device/motorola/hiphi/device.mk)
 
 PRODUCT_DEVICE := hiphi
-PRODUCT_NAME := omni_hiphi
+PRODUCT_NAME := twrp_hiphi
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := motorola edge 30 pro
 PRODUCT_MANUFACTURER := motorola
