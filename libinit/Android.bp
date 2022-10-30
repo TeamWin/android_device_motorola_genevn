@@ -1,0 +1,19 @@
+//
+// Copyright (C) 2022 Team Win Recovery Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_static {
+    name: "libinit_hiphi",
+    recovery_available: true,
+    srcs: ["init_hiphi.cpp"],
+    whole_static_libs: ["libbase"],
+    include_dirs: [
+        "system/core/init",
+        "system/libbase/include"
+    ],
+    shared_libs: [
+        "libbase",
+    ],
+}
