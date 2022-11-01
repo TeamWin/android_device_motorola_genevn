@@ -130,6 +130,7 @@ TW_DEFAULT_BRIGHTNESS := 1024
 TW_FRAMERATE := 60
 TW_HAS_EDL_MODE := true
 TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone39/temp
+TW_EXCLUDE_DEFAULT_USB_INIT := true
 
 # Debug flags
 TWRP_INCLUDE_LOGCAT := true
