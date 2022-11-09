@@ -1,0 +1,13 @@
+# Copyright (c) 2021 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+
+on property:hwservicemanager.ready=true && property:vendor.sys.listeners.registered=true
+    start keymint-qti
+
+service keymint-qti /system/bin/android.hardware.security.keymint-service-qti
+    user root
+    group root
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
+    disabled
+    seclabel u:r:recovery:s0
