@@ -30,6 +30,27 @@ import /init.recovery.qcom_decrypt.rc
 on early-init
     start set_permissive
 
+    # Kernel modules
+    insmod /vendor/lib/modules/msm_drm.ko
+    insmod /vendor/lib/modules/mmi_annotate.ko
+    insmod /vendor/lib/modules/mmi_info.ko
+    insmod /vendor/lib/modules/mmi_relay.ko
+    insmod /vendor/lib/modules/mmi_charger.ko
+    insmod /vendor/lib/modules/mmi_sys_temp.ko
+    insmod /vendor/lib/modules/sensors_class.ko
+    insmod /vendor/lib/modules/touchscreen_mmi.ko
+    insmod /vendor/lib/modules/stmicro_mmi.ko
+    insmod /vendor/lib/modules/goodix_brl_mmi.ko
+    insmod /vendor/lib/modules/sx937x_sar.ko
+    insmod /vendor/lib/modules/qti_glink_charger.ko
+    insmod /vendor/lib/modules/qpnp_adaptive_charge.ko
+    insmod /vendor/lib/modules/q6_pdr_dlkm.ko
+    insmod /vendor/lib/modules/q6_notifier_dlkm.ko
+    insmod /vendor/lib/modules/snd_event_dlkm.ko
+    insmod /vendor/lib/modules/gpr_dlkm.ko
+    insmod /vendor/lib/modules/spf_core_dlkm.ko
+    insmod /vendor/lib/modules/adsp_loader_dlkm.ko
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
