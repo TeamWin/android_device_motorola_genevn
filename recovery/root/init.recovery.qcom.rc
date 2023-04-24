@@ -32,6 +32,10 @@ on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
+    # Load ADSP firmware for PMIC
+    start runatboot
+    wait /sys/class/power_supply/battery
+
 on post-fs
     start boot-hal-1-2
 
@@ -39,6 +43,13 @@ on boot
     start health-hal-2-1
 
 service set_permissive /system/bin/set_permissive.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+service runatboot /system/bin/runatboot.sh
     user root
     group root
     disabled
