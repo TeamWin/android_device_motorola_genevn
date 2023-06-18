@@ -30,7 +30,12 @@ import /init.recovery.qcom_decrypt.rc
 on early-init
     start set_permissive
 
-    # Kernel modules
+on fs
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+on property:init.svc.fastbootd=running
+    # Load prebuild kernel modules in fastboot mode
     insmod /vendor/lib/modules/msm_drm.ko
     insmod /vendor/lib/modules/mmi_annotate.ko
     insmod /vendor/lib/modules/mmi_info.ko
@@ -51,12 +56,15 @@ on early-init
     insmod /vendor/lib/modules/gpr_dlkm.ko
     insmod /vendor/lib/modules/spf_core_dlkm.ko
     insmod /vendor/lib/modules/adsp_loader_dlkm.ko
+    setprop twrp.modules.loaded true
 
-on fs
-    wait /dev/block/platform/soc/${ro.boot.bootdevice}
-    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+on post-fs && property:init.svc.fastbootd=stopped
+    # Trigger loading kernel modules in normal mode
+    setprop twrp.modules.loaded true
 
-    # Load ADSP firmware for PMIC
+on property:twrp.modules.loaded=true
+    # Load kernel modules and ADSP firmware for PMIC
+    wait /sys/kernel/boot_adsp/boot
     start runatboot
     wait /sys/class/power_supply/battery
 
