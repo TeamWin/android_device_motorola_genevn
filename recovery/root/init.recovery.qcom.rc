@@ -42,6 +42,7 @@ on early-init
     insmod /vendor/lib/modules/stmicro_mmi.ko
     insmod /vendor/lib/modules/goodix_brl_mmi.ko
     insmod /vendor/lib/modules/sx937x_sar.ko
+    insmod /vendor/lib/modules/bm_adsp_ulog.ko
     insmod /vendor/lib/modules/qti_glink_charger.ko
     insmod /vendor/lib/modules/qpnp_adaptive_charge.ko
     insmod /vendor/lib/modules/q6_pdr_dlkm.ko
