@@ -81,19 +81,16 @@ void vendor_load_properties() {
     if (sku == "XT2201-1") {
         load_device_properties("hiphi-user 12 S3SHS32.12-42-11-5 bf0951", "motorola/hiphi/hiphi:12/S3SHS32.12-42-11-5/bf0951:user/release-keys", "hiphi", "Motorola Edge 30 Pro");
     }
-    else if (sku == "XT2201-3") {
+    if (sku == "XT2201-3") {
         load_device_properties("hiphi-user 12 S3SHS32.12-42-11-5 bf0951", "motorola/hiphi/hiphi:12/S3SHS32.12-42-11-5/bf0951:user/release-keys", "hiphi", "Motorola Edge Plus (2022)");
     }
-    else if (sku == "XT2201-4") {
-        load_device_properties("hiphi-user 12 S3SHS32.12-41-4-1 66f58d", "motorola/hiphi/hiphi:12/S3SHS32.12-41-4-1/66f58d:user/release-keys", "hiphi", "Motorola Edge Plus 5G UW");
+    if (sku == "XT2201-4") {
+        load_device_properties("hiphi-user 12 S3SHS32.12-42-11-5 bf0951", "motorola/hiphi/hiphi:12/S3SHS32.12-42-11-5/bf0951:user/release-keys", "hiphi", "Motorola Edge Plus 5G UW");
     }
-    else if (sku == "XT2201-2") {
+    if (sku == "XT2201-2") {
         load_device_properties("hiphic-user 12 S3SC32.7-42-20 02af5", "motorola/hiphic/hiphic:12/S3SC32.7-42-20/02af5:user/release-keys", "hiphic", "Motorola Edge X30");
     }
-    else if (sku == "XT2201-6") {
+    if (sku == "XT2201-6") {
         load_device_properties("hiphid-user 12 S3SF32.35-5-9 37351", "motorola/hiphid/hiphid:12/S3SF32.35-5-9/37351:user/release-keys", "hiphid", "Motorola Edge X30");
     }
-    else {
-        load_device_properties("hiphic-user 12 S3SC32.7-42-20 02af5", "motorola/hiphic/hiphic:12/S3SC32.7-42-20/02af5:user/release-keys", "hiphic", "Motorola Edge X30");
-   }
 }
