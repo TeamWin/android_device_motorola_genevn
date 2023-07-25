@@ -1,0 +1,19 @@
+on post-fs
+    start vendor.spdaemon
+    start vendor.sec_nvm
+
+service vendor.spdaemon /system/bin/spdaemon
+    user root
+    group root
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
+    disabled
+    seclabel u:r:recovery:s0
+    shutdown critical
+
+service vendor.sec_nvm /system/bin/sec_nvm
+    user root
+    group root
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
+    disabled
+    seclabel u:r:recovery:s0
+
