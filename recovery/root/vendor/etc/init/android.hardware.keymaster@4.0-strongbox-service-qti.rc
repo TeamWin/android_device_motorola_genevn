@@ -1,0 +1,9 @@
+on property:hwservicemanager.ready=true && property:vendor.sys.listeners.registered=true
+    start keymaster-sb-4-0
+
+service keymaster-sb-4-0 /system/bin/android.hardware.keymaster@4.0-strongbox-service-qti
+    user root
+    group root
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
+    disabled
+    seclabel u:r:recovery:s0
