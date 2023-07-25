@@ -1,0 +1,15 @@
+#####################################################################
+# Copyright (c) 2021-2022 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+#####################################################################
+
+on boot
+    start spuservice
+
+service spuservice /system/bin/vendor.qti.spu@2.0-service
+    user root
+    group root
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
+    disabled
+    seclabel u:r:recovery:s0
