@@ -1,4 +1,5 @@
 on property:hwservicemanager.ready=true && property:vendor.sys.listeners.registered=true
+    start keymaster-4-1-qti
     start keymaster-sb-4-0
 
 service keymaster-sb-4-0 /system/bin/android.hardware.keymaster@4.0-strongbox-service-qti
