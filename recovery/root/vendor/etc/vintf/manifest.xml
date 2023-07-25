@@ -1,9 +1,8 @@
 <!--
     Input:
-        manifest_taro.xml
-        manifest.xml
+        manifest_cape.xml
         manifest_mot8450.xml
-        manifest_hiphi.xml
+        manifest_bronco.xml
         paramupdater_manifest.xml
         manifest.xml
 -->
@@ -103,6 +102,11 @@
         <name>android.hardware.keymaster</name>
         <transport>hwbinder</transport>
         <fqname>@4.1::IKeymasterDevice/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.keymaster</name>
+        <transport>hwbinder</transport>
+        <fqname>@4.0::IKeymasterDevice/strongbox</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.media.omx</name>
@@ -207,24 +211,14 @@
         <fqname>@1.1::IDisplayPanel/default</fqname>
     </hal>
     <hal format="hidl" override="true">
-        <name>com.motorola.hardware.display.stylus</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>IMotStylus</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.1::IMotStylus/default</fqname>
-    </hal>
-    <hal format="hidl" override="true">
         <name>com.motorola.hardware.display.touch</name>
         <transport>hwbinder</transport>
-        <version>1.1</version>
+        <version>1.2</version>
         <interface>
             <name>IMotTouch</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.1::IMotTouch/default</fqname>
+        <fqname>@1.2::IMotTouch/default</fqname>
     </hal>
     <hal format="hidl">
         <name>com.qualcomm.qti.dpm.api</name>
@@ -323,12 +317,32 @@
     <hal format="hidl">
         <name>motorola.hardware.wireless.powershare</name>
         <transport>hwbinder</transport>
-        <version>2.0</version>
+        <version>1.0</version>
         <interface>
             <name>IMotPowerShare</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::IMotPowerShare/default</fqname>
+        <fqname>@1.0::IMotPowerShare/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>motorola.hardware.wireless.wlc</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IMotWlc</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.0::IMotWlc/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.egistec.hardware.fingerprint</name>
+        <transport>hwbinder</transport>
+        <version>4.0</version>
+        <interface>
+            <name>IBiometricsFingerprintRbs</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@4.0::IBiometricsFingerprintRbs/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.nxp.hardware.nfc</name>
@@ -764,13 +778,13 @@
         <name>vendor.qti.ims.factory</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
-        <version>2.1</version>
+        <version>2.2</version>
         <interface>
             <name>IImsFactory</name>
             <instance>default</instance>
         </interface>
         <fqname>@1.1::IImsFactory/default</fqname>
-        <fqname>@2.1::IImsFactory/default</fqname>
+        <fqname>@2.2::IImsFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.imsrtpservice</name>
@@ -805,6 +819,36 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IQspmhal/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.spu</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>ISPUManager</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.1::ISPUManager/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.spu</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>ISPUManager</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.0::ISPUManager/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.zui.hardware.ifaa</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IIFAADevice</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IIFAADevice/default</fqname>
     </hal>
     <sepolicy>
         <version>31.0</version>

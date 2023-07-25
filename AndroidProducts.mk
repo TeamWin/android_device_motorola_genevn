@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_hiphi.mk
+    $(LOCAL_DIR)/twrp_eqs.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_hiphi-user \
-    twrp_hiphi-userdebug \
-    twrp_hiphi-eng
+    twrp_eqs-user \
+    twrp_eqs-userdebug \
+    twrp_eqs-eng

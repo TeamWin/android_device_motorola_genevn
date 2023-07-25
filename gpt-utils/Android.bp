@@ -15,7 +15,7 @@
 //
 
 cc_library {
-    name: "libgptutils.moto_sm8450",
+    name: "libgptutils.moto_sm8475",
     vendor: true,
     recovery_available: true,
     shared_libs: [

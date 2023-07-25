@@ -1,24 +1,24 @@
-Device configuration for Motorola Edge 30 Pro / Edge Plus (2022) / Edge Plus 5G UW / Edge X30 (hiphi/hiphic/hiphid)
+Device configuration for Edge 30 Ultra / Edge X30 Pro (codenamed "eqs")
 =========================================
 
-The Motorola Edge 30 Pro / Edge Plus (2022) / Edge Plus 5G UW / Edge X30 (codenamed _"hiphi/hiphic/hiphid"_) is a flagship smartphone from Motorola mobility announced in December 2021.
+The Motorola Edge 30 Ultra / Edge X30 Pro (codenamed _"eqs"_) is a flagship smartphone from Motorola mobility announced in December 2021.
 
 ## Device specifications
 
 Basic   | Spec Sheet
 -------:|:-------------------------
-SoC     | Qualcomm SM8450 Snapdragon 8 Gen 1 (4 nm)
-CPU     | Octa-core (1x3.0 GHz Kryo 780 & 3x2.5 GHz Kryo 780 & 4x1.8GHz Kryo 780)
+SoC     | Qualcomm SM8475 Snapdragon 8+ Gen 1 (4 nm)
+CPU     | Octa-core (1x3.19 GHz Cortex-X2 & 3x2.75 GHz Cortex-A710 & 4x1.8GHz Cortex-A510)
 GPU     | Adreno 730
 Memory  | 8/12 GB RAM (LPDDR5)
 Shipped Android Version | 12.0, My UX 3.0 (Global) / MY UI 3.0 (China)
 Storage | 128/256/512 GB (UFS 3.1)
-Battery | Non-removable Li-Po 4800 mAh (Global) / 5000 mAh (China) battery
-Display | 2400 x 1080 pixels, 6.18 inches (~403 ppi density)
-Camera  | 50MP (Main) + 50MP (Ultra-wide) + 2MP (Depth) + 60MP (Selfie)
+Battery | Non-removable Li-Po 4610 mAh battery
+Display | 2400 x 1080 pixels, 6.67 inches (~403 ppi density)
+Camera  | 200MP (Main) + 50MP (Ultra-wide) + 12MP (Telephoto) + 60MP (Selfie)
 
 ## Device picture
-![Motorola Edge 30 Pro / Edge Plus (2022) / Edge Plus 5G UW / Edge X30](https://i.imgur.com/B0cNJ79.png)
+![Motorola Edge 30 Ultra / Edge X30 Pro](https://fdn2.gsmarena.com/vv/pics/motorola/motorola-edge-30-ultra-3.jpg)
 
 # Status
 Current state of features:
@@ -47,7 +47,7 @@ Current state of features:
 ```bash
 export ALLOW_MISSING_DEPENDENCIES=true
 source build/envsetup.sh
-lunch twrp_hiphi-eng
+lunch twrp_eqs-eng
 mka recoveryimage -j$(nproc --all)
 ```
 

@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/motorola/hiphi
+DEVICE_PATH := device/motorola/eqs
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -50,8 +50,8 @@ TARGET_USES_REMOTEPROC := true
 TARGET_SCREEN_DENSITY := 400
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_hiphi
-TARGET_RECOVERY_DEVICE_MODULES := libinit_hiphi
+#TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_eqs
+#TARGET_RECOVERY_DEVICE_MODULES := libinit_eqs
 
 # Kernel
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
@@ -137,7 +137,7 @@ TW_INCLUDE_NTFS_3G := true
 TW_BACKUP_EXCLUSIONS := /data/fonts
 TW_NO_SCREEN_BLANK := true
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
-TW_MAX_BRIGHTNESS := 2047
+TW_MAX_BRIGHTNESS := 3515
 TW_DEFAULT_BRIGHTNESS := 1024
 TW_FRAMERATE := 60
 TW_HAS_EDL_MODE := true
