@@ -77,13 +77,11 @@ on boot
 service set_permissive /system/bin/set_permissive.sh
     user root
     group root
-    disabled
     oneshot
     seclabel u:r:recovery:s0
 
 service runatboot /system/bin/runatboot.sh
     user root
     group root
-    disabled
     oneshot
     seclabel u:r:recovery:s0

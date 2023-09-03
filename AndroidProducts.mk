@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_eqs.mk
+    $(LOCAL_DIR)/twrp_genevn.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_eqs-user \
-    twrp_eqs-userdebug \
-    twrp_eqs-eng
+    twrp_genevn-user \
+    twrp_genevn-userdebug \
+    twrp_genevn-eng
