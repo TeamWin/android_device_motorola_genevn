@@ -1,3 +1,14 @@
+#
+# Copyright (C) 2024 The Android Open Source Project
+# Copyright (C) 2024 SebaUbuntu's TWRP Device Tree Generator
+# Copyright (C) 2019-Present A-Team Digital Solutions
+# Copyright (C) 2024 sosRR
+#
+
+# Product Information
+ro.product.board=parrot
+ro.board.platform=parrot
+
 # ADB
 ro.adb.secure=0
 
@@ -6,14 +17,23 @@ ro.charger.enable_suspend=1
 
 # Crypto
 ro.crypto.allow_encrypt_override=true
-ro.crypto.dm_default_key.options_format.version=2
+vendor.gatekeeper.disable_spu=true
+fbe.metadata.wrappedkey=true
 ro.crypto.volume.filenames_mode=aes-256-cts
+ro.vendor.qti.va_aosp.support=1
 ro.crypto.volume.metadata.method=dm-default-key
 
 # MTP
 vendor.usb.use_ffs_mtp=1
 
+# USB Passthrough
+persist.sys.isUsbOtgEnabled=true
+sys.usb.controller=a600000.dwc3
+
 # Storage
 external_storage.projid.enabled=1
 external_storage.casefold.enabled=1
 external_storage.sdcardfs.enabled=0
+
+# Virtual AB device
+ro.virtual_ab.enabled=true

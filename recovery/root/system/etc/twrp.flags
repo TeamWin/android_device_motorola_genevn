@@ -1,8 +1,9 @@
-# Android fstab file.
-# The filesystem that contains the filesystem checker binary (typically /system) cannot
-# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
-
-# Currently we dont have e2fsck compiled. So fs check would failed.
+#
+# Copyright (C) 2024 The Android Open Source Project
+# Copyright (C) 2024 SebaUbuntu's TWRP Device Tree Generator
+# Copyright (C) 2019-Present A-Team Digital Solutions
+# Copyright (C) 2024 sosRR
+#
 
 # <mount_point>       <fstype>    <device>           <device2>                   <flags>
 # Boot partitions
@@ -16,23 +17,23 @@
 /misc                 emmc        /dev/block/bootdevice/by-name/misc             flags=display="Misc"
 
 # Logical partitions
-/system               ext4        system                                         flags=display="System"
-/system               erofs       system                                         flags=display="System"
-/system_ext           ext4        system_ext                                     flags=display="System EXT"
-/system_ext           erofs       system_ext                                     flags=display="System EXT"
-/product              ext4        product                                        flags=display="Product"
-/product              erofs       product                                        flags=display="Product"
-/vendor               ext4        vendor                                         flags=display="Vendor"
-/vendor               erofs       vendor                                         flags=display="Vendor"
-/vendor_dlkm          ext4        vendor_dlkm                                    flags=display="Vendor DLKM"
-/vendor_dlkm          erofs       vendor_dlkm                                    flags=display="Vendor DLKM"
+/system               ext4        system                                         flags=display="System";backup=1;flashimg=1;wipeingui;logical;slotselect
+/system               erofs       system                                         flags=display="System";backup=1;flashimg=1;wipeingui;logical;slotselect
+/system_ext           ext4        system_ext                                     flags=display="System EXT";backup=1;flashimg=1;wipeingui;logical;slotselect
+/system_ext           erofs       system_ext                                     flags=display="System EXT";backup=1;flashimg=1;wipeingui;logical;slotselect
+/product              ext4        product                                        flags=display="Product";backup=1;flashimg=1;wipeingui;logical;slotselect
+/product              erofs       product                                        flags=display="Product";backup=1;flashimg=1;wipeingui;logical;slotselect
+/vendor               ext4        vendor                                         flags=display="Vendor";backup=1;flashimg=1;wipeingui;logical;slotselect
+/vendor               erofs       vendor                                         flags=display="Vendor";backup=1;flashimg=1;wipeingui;logical;slotselect
+/vendor_dlkm          ext4        vendor_dlkm                                    flags=display="Vendor DLKM";backup=1;flashimg=1;wipeingui;logical;slotselect
+/vendor_dlkm          erofs       vendor_dlkm                                    flags=display="Vendor DLKM";backup=1;flashimg=1;wipeingui;logical;slotselect
 
 # Flashable logical partitions
-/system_image         emmc        /dev/block/bootdevice/by-name/system           flags=display="System Image";backup=1;flashimg=1
-/system_ext_image     emmc        /dev/block/bootdevice/by-name/system_ext       flags=display="System EXT Image";backup=1;flashimg=1
-/product_image        emmc        /dev/block/bootdevice/by-name/product          flags=display="Product Image";backup=1;flashimg=1
-/vendor_image         emmc        /dev/block/bootdevice/by-name/vendor           flags=display="Vendor Image";backup=1;flashimg=1
-/vendor_dlkm_image    emmc        /dev/block/bootdevice/by-name/vendor_dlkm      flags=display="Vendor DLKM Image";backup=1;flashimg=1
+/system_image         emmc        /dev/block/bootdevice/by-name/system           flags=display="System Image";backup=1;flashimg=1;wipeingui;slotselect
+/system_ext_image     emmc        /dev/block/bootdevice/by-name/system_ext       flags=display="System EXT Image";backup=1;flashimg=1;wipeingui;slotselect
+/product_image        emmc        /dev/block/bootdevice/by-name/product          flags=display="Product Image";backup=1;flashimg=1;wipeingui;slotselect
+/vendor_image         emmc        /dev/block/bootdevice/by-name/vendor           flags=display="Vendor Image";backup=1;flashimg=1;wipeingui;slotselect
+/vendor_dlkm_image    emmc        /dev/block/bootdevice/by-name/vendor_dlkm      flags=display="Vendor DLKM Image";backup=1;flashimg=1;slotselect
 
 # Data partitions
 /metadata             ext4        /dev/block/by-name/metadata                    flags=display="Metadata"
@@ -55,5 +56,6 @@
 /efsg                 emmc        /dev/block/bootdevice/by-name/fsg              flags=backup=1;subpartitionof=/efs1
 
 # Removable storage
-/usb-otg         auto       /dev/block/sda1         /dev/block/sda                flags=display="USB OTG";storage;wipeingui;removable
-/external_sd     auto       /dev/block/mmcblk1p1    /dev/block/mmcblk1            flags=display="Micro SD Card";storage;wipeingui;removable
+/external_sd          auto        /dev/block/mmcblk1p1    /dev/block/mmcblk1     flags=display="MicroSD-Card";storage;wipeingui;removable
+/usbotg               auto        /dev/block/sdg1         /dev/block/sdg         flags=display="USB-OTG";storage;wipeingui;removable
+/storage              auto        /data/media/0                                  flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
